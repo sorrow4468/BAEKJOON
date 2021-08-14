@@ -1,28 +1,18 @@
 """
-알파벳은 26자
-A에서 Z로 가는 가장 빠른 법은 오른쪽으로 한 칸
-그냥 A에서 Z까지 거리는 25
-거리가 12이상이면 오른쪽, 이하면 왼쪽으로
-A to Z 중간은 
-abcdefghijklm
-nopqrstuvwxyz
-abcdefghijklmnopqustuvwxyzabcdefghijklmnopqustuvwxyz
-알파벳 간에 거리는
-각 알파벳이 지니는 숫자
-a1, b2, c3, d4, e5, f6, g7, h8, i9, j10, k11, l12, m13
-n14, o15, p16, q17, r18, s19, t20, u21, v22, w23, x24, y25, z26
-거리 = |알파벳-알파벳|
-다이얼 돌리는 최단루트 = 거리가 가장 가까운 순서
-ex) A -> ZOAC = 
-|출발알파벳 - 도착알파벳| == 13:
-    좌 우 상관없음
-|출발알파벳 - 도착알파벳| > 13:
-    |출발알파벳 - 도착알파벳| - 26
-    좌(반시계)
-|출발알파벳 - 도착알파벳| < 13:
-    |출발알파벳 - 도착알파벳|
-    우(시계)
-
-w -> a = |23 - 1| = 22 - 26 = -4
-a -> w = |1 - 23| = 22
+시계모양에서 알파벳간에 거리는 ASCII 코드로 |A-B|
+13을 초과하면 26-|A-B|
 """
+word = input()                              # 입력받을 단어
+word = 'A' + word                           # 단어의 맨 앞에 시작점인 A 추가
+def zoac(A, B):                             # 글자간 거리를 구하는 함수 zoac()
+    if abs(ord(A)-ord(B)) > 13:             # 두 글자의 거리가 13을 초과하면
+        result = 26 - abs(ord(A)-ord(B))    # 26에서 거리만큼을 빼줌
+                                            # 한바퀴(26)에서 거리만큼 뒤로 오겠다는 뜻
+    else:                                   # 거리가 13아래면
+        result = abs(ord(A)-ord(B))         # 거리 = 절대값
+    return result                           # 결과 반환
+sum_word = 0                                # 글자간 거리를 더할 변수
+for i in range(1, len(word)):               # 2번째 글자부터 마지막 글자까지
+                                            # 두 글자씩 비교할 것이기 때문
+    sum_word += zoac(word[i-1], word[i])    # 글자간 거리들을 변수에 더하고
+print(sum_word)                             # 거리들을 더한 값을 출력
