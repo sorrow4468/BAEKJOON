@@ -1,5 +1,4 @@
 import sys
-from types import SimpleNamespace
 
 n = int(sys.stdin.readline())
 ori = list(range(2, n+1))
@@ -23,7 +22,6 @@ for _ in range(n):
             ope.append('+')
         tmp.pop()
         ope.append('-')    
-    
 
 for o in ope:
     print(o)
