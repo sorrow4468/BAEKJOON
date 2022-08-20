@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      /* div { 
+        padding-top: 500px; 
+        height:500px;
+      } */
+
+      #block { 
+        background-color: pink; 
+      }
+      .title { 
+        color: darkblue; 
+      }
+      .bold {
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    
+
+    <hr>
+    <!-- 
+      semantic tag, 시멘틱 태그, 의미론적 태그, html5 이후 추가 
+      자주 사용되는 시멘틱 태그 : header, section, main, footer, article
+    -->
+    <header>
+      <h1>오늘의 일기</h1>
+    </header>
+    <nav>
+      <ol>
+        <li><a href="">모든 일기</a></li>
+        <li><a href="">어제 일기</a></li>
+        <li><a href="">방명록</a></li>
+      </ol>
+    </nav>
+    <article>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quidem omnis, nam non eligendi rem voluptatem hic praesentium quis officia nesciunt atque iste iure cupiditate ipsa illo quos dolore temporibus.
+      </p>
+    </article>
+    <footer>
+      <div>선문스타</div>
+    </footer>
+
+    <hr>
+    <!-- 
+      HTTP : 클라이언트와 서버간 통신 방법에 대한 규칙
+      method의 종류
+      GET : 서버로부터 정보를 조회하기 위한 메소드
+      POST : 리소스를 생성하거나 변경하기 위한 메소드 
+      method 생략 시 default = GET
+    -->
+    <form action="입력한 데이터를 보낼 링크" method="GET"></form>
+
+    <hr>
+    <label for="korean">국어</label>
+    <input id="korean" type="checkbox" name="subject">
+    <label for="english">영어</label>
+    <input id="english" type="checkbox" name="subject">
+    <label for="math">수학</label>
+    <input id="math" type="checkbox" name="subject">
+
+    <hr>
+    <label for="male">남</label>
+    <input id="male" type="radio" name="gender">
+    <label for="female">여</label>
+    <input id="female" type="radio" name="gender">
+
+    <hr>    
+    <label for="name">이름</label>
+    <input type="text" id="name" placeholder="이름">
+
+    <hr>
+    <form action="">
+      <input type="text" placeholder="이름">
+      <input type="email" placeholder="이메일">
+      <input type="password" placeholder="패스워드">
+      <input type="submit" value="회원가입">
+      <input type="reset" value="초기화">
+      <button>회원가입</button>
+    </form>
+
+    <hr>
+    <!-- 
+      id는 단 하나의 태그에만 사용할 수 있고 
+      class는 여러 태그에 중복 사용할 수 있음
+    -->
+    <div id="block" class="title bold">
+      <h2 class="title">Hello</h2>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        Impedit ullam autem atque commodi libero? Hic nisi voluptatum
+        numquam cumque. Vitae, molestiae? <span class="title bold">Repellat,</span> 
+        temporibus impedit voluptate veniam beatae aliquid dolores! Fugiat!
+      </p>
+      
+    </div>
+    
+
+    <hr>
+    <video controls width="500px" src="../video/Robin-21723.mp4"></video>
+    <audio controls src="../audio/KakaoTalk_Audio_20220806_2339_07_971.m4a"></audio>
+
+    <hr>
+    <img width="" height="" src="../img/nature.png" alt="nature">
+    <img width="" height="" src="../img/nature.png" alt="nature">
+
+    <hr>
+    <ul> <!--id 연결은 #-->
+      <li><a href="#first">1단원</a></li>
+      <li><a href="#second">2단원</a></li>
+      <li><a href="#third">3단원</a></li>
+    </ul>
+
+    <div id="first">1단원 본문</div>
+    <div id="second">2단원 본문</div>
+    <div id="third">3단원 본문</div>
+    <a href="#top">맨 위로 바로가기</a>
+
+    <hr>
+    <a href="https://google.com" target="_blank">구글로 이동하기</a>
+
+    <hr>
+    <!-- 
+      ul : 순서가 없는 리스트
+      ol : 순서가 있는 리스트
+      li : 리스트 내 항목
+    -->
+    <ul> <!--unordered list-->
+      <li>청소하기</li>
+      <li>빨래하기</li>
+    </ul>    
+
+    <ol> <!--ordered list-->
+      <li>청소하기</li>
+      <li>빨래하기</li>
+    </ol>
+
+    <hr>
+    <p>
+      <b>this is b tag</b>
+      <strong>this is strong tag</strong>
+      <!-- 
+        b와 strong 차이 
+        둘 다 굵은 글씨라는 점은 같지만
+        b는 그 효과만 주는 것과 다르게 
+        strong은 의미적으로 해당 내용이 중요하다고 알림
+        브라우저와 검색엔진등에서 차이가 남
+      -->   
+      <i>this is i tag</i>
+      <em>this is em tag</em>
+      <!-- 
+        b와 strong의 차이와 마찬가지로
+        i와 다르게 em은 해당 텍스트가 의미적으로 중요하다는 것을 알림
+      -->
+      <ins>this is ins tag</ins>
+      <del>this is del tag</del>
+      <q>this is q tag</q>
+      <!-- q : 짧은 인용문, 인라인태그 -->
+      <blockquote>this is blockquote tag</blockquote>
+      <!-- blockquote : 블록태그, 긴 인용문, 뽝!! -->
+    </p>
+
+    <hr>
+    <p>
+      <span>안녕하세요!</span>
+      <h1>this is headline 1</h1> 
+      <!-- 태그 중첩 규칙에 의거하여 블록태그인 h1은 밖으로 밀려남 -->
+    </p>
+
+    <hr>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+      Quae dolor delectus distinctio quos expedita consequuntur <br>
+      perferendis odio ducimus veniam illo, fuga ratione sit culpa <br>
+      aut suscipit cupiditate vero molestias non! <br>
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+      Fuga error placeat, obcaecati tempora sapiente minus accusamus <br> 
+      accusantium corporis labore officia, qui magni nam quisquam <br>
+      eius vel. Facilis molestiae nulla commodi! <br>
+    </p>
+
+    <hr>
+    <div>
+      <h1>h1 안녕하세요</h1>
+      <h2>h2 안녕하세요</h2>
+      <h3>h3 안녕하세요</h3>
+      <h4>h4 안녕하세요</h4>
+      <h5>h5 안녕하세요</h5>
+    </div>
+
+    <hr>
+    <div>
+      <h2>태그 중첩 규칙</h2>
+      <p>블록태그 내부에는 블록태그와 인라인태그 모두 중첩될 수 있음</p>
+      <p>인라인태그 내무에는 인라인태그만 중첩될 수 있음</p>
+      <p>블록태그 중 p태그만 예외로, 블록태그임에도 내부에 인라인태그만 중첩될 수 있음</p>
+      <!-- 자세한 내용은 MDN 공식문서 참고 -->
+    </div>
+
+    <hr>
+    <span>인라인</span>
+    <span>인라인</span>
+    <div>블록</div>
+    <span>인라인</span>
+
+    <hr>
+    <h1>안녕하세요!</h1>
+    <!-- 만나서 반갑습니다 -->
+    <p>이건 p태그</p>
+    <img src="../img/nature.png" alt="this is nature" style="width:600px">
+  </body>
+</html>
