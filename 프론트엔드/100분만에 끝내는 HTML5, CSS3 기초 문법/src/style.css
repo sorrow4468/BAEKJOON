@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+/* import문은 반드시 .css 최상단에 삽입할 것 */
+
+#color-test {
+  color: skyblue;
+  font-size: 20px;
+}
+.color-test {
+  color: lightcoral;
+  font-size: 20px;
+}
+.first > h1 {
+  color: red;
+}
+
+p {
+  color:darkgreen;
+  text-align: center;
+  line-height: 200%;
+  text-decoration: line-through;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Jua', sans-serif;
+}
+
+a {
+  color: white;
+  background-color: black;
+  font-size: 20px;
+  text-decoration: none;
+}
+a:hover {
+  background-color: crimson;
+}
+ul {
+  list-style: armenian;
+}
+
+#box {
+  width: 100px;
+  height: 50px;
+  background-color: pink;
+  margin-bottom: 10px;
+}
+#box:hover {
+  background-color: skyblue;
+}
+#box:active {
+  background-color: crimson;
+}
+input:focus {
+  background-color: skyblue;
+}
+body {
+  padding: 30px;
+  background-image: url(https://i.pinimg.com/736x/5f/0c/ba/5f0cba55228e7ed1c0865977837f70b4.jpg);
+}
+.children {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-color: skyblue;
+}
+.parent div:nth-child(even) {
+  background-color: pink;
+}
+
+#margin-padding {
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+  padding: 20px;
+  margin: 20px;
+  border: 3px solid gray;
+  border-radius: 10px;
+}
+
+div {
+  width: 150px;
+  height: 50px;
+  background-color: salmon;
+  box-sizing: border-box;
+}
+/* 
+  box-sizing: border-box 이거 좋다
+  맨날 사이즈 조절 안되고 불편했는데 이렇게 하면 되는구나
+*/
+.box2 {
+  border: 5px solid black;
+}
+.box3 {
+  padding: 20px;
+}
+
+/* css의 주석 다는 법 */
+
+/*
+  css 선택자의 종류
+  1. 전체 선택자 : HTML 문서 내 모든 요소, 식별자 : *
+  2. 태그 요소 선택자 : HTML 문서 내 특정 태그, 식별자 : 태그
+  3. 아이디 선택자 : HTML 문서 내 특정 아이디, 식별자 : #아이디
+  4. 클래스 선택자 : HTML 문서 내 특정 클래스, 식별자 : .클래스
+  
+  우선순위
+  아이디 > 클래스 > 태그 > 전체선택자 
+*/
