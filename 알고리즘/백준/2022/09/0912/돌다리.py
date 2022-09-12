@@ -16,3 +16,5 @@ while Q: # 항상 도달할 수 있는 경우만 주어짐
     for next in nexts:
         if 0<=next<=100000 and not visited[next]: Q.append((next, move+1)) # 돌다리 범위를 만족하며, 방문한 적 없는 돌다리 일 때
 print(result)
+
+# https://www.acmicpc.net/problem/12761
