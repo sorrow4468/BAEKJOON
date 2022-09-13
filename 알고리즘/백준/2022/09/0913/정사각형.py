@@ -23,3 +23,5 @@ for _ in range(int(input())):
             tmp.sort()
             if tmp != distance_pows: flag = 0
         print(flag)
+
+# https://www.acmicpc.net/problem/1485

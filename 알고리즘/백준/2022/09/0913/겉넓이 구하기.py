@@ -21,3 +21,5 @@ for i in range(N):
             result += face
             now -= 1    
 print(result + N*M - zero)
+
+# https://www.acmicpc.net/problem/16931
