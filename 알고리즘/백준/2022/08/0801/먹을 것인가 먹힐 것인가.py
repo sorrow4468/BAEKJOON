@@ -12,3 +12,5 @@ for t in range(T):
         else:
             j += 1
     print(result)
+
+# https://www.acmicpc.net/problem/7795

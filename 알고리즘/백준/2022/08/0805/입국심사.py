@@ -25,3 +25,5 @@ print(result)
 start<=end 인 동안 M명을 심사할 수 있는 시간초를
 이분탐색으로 줄여나간다
 """
+
+# https://www.acmicpc.net/problem/3079

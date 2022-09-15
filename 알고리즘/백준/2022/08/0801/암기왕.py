@@ -15,3 +15,5 @@ for t in range(T):
     for a in arr2:
         s, e = 0, N-1
         print(binary(a, s, e))
+
+# https://www.acmicpc.net/problem/2776

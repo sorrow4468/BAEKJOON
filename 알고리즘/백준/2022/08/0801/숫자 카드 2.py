@@ -9,3 +9,5 @@ M_list = list(map(int, input().split()))
 for m in M_list:
     try: print(dct[m], end=' ')
     except: print(0, end=' ')
+
+# https://www.acmicpc.net/problem/10816

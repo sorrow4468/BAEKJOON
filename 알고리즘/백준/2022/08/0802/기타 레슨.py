@@ -24,3 +24,5 @@ S, E = max(L), sum(L)
 result = int(1e9)
 binary(S, E)
 print(result)
+
+# https://www.acmicpc.net/problem/2343

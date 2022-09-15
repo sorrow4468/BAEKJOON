@@ -18,3 +18,5 @@ S, E = 0, M
 result = 0
 binary(S, E)
 print(min(B[-1], result))
+
+# https://www.acmicpc.net/problem/2512
