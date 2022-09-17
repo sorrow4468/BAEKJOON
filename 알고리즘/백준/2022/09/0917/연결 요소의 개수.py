@@ -30,3 +30,5 @@ for i in range(1, N+1):
     BFS(i)
     if sum(visited) == N: break
 print(result)
+
+# https://www.acmicpc.net/problem/11724
