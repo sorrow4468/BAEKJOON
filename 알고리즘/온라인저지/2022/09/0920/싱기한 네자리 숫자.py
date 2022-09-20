@@ -15,7 +15,7 @@ def change(num, base):
         num //= base
     return result
 
-def digits_sum(num, base):
+def digits_sum(num):
     result = 0
     for n in num:
         result += digits_dict[n]
@@ -23,7 +23,7 @@ def digits_sum(num, base):
 
 for num in range(1000, 10000):
     A, B, C = str(num), change(num, 12), change(num, 16)
-    A, B, C = digits_sum(A, 10), digits_sum(B, 12), digits_sum(C, 16)
+    A, B, C = digits_sum(A), digits_sum(B), digits_sum(C)
     if A == B == C: print(num)
 
 # https://www.acmicpc.net/problem/6679
