@@ -1,8 +1,8 @@
-n = int(1e7)
-a = [False, False] + [True]*(n-1)
-primes = []
-for i in range(2, n+1):
-    if a[i]:
-        primes.append(i)
-        for j in range(2*i, n+1, i):
-            a[j] = False
+def prime_list(size):
+    sieve = [True]*(size+1)
+    for i in range(2, int(size**0.5)+1):
+        if sieve[i]:
+            for j in range(i+i, size+1, i):
+                sieve[j] = False
+    return [i for i in range(2, size+1) if sieve[i]]
+
