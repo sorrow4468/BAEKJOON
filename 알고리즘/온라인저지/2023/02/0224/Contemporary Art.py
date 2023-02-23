@@ -1,0 +1,1 @@
+print(f'{int(input())**0.5*4:.6f}')
